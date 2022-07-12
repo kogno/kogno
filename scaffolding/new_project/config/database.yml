@@ -1,0 +1,8 @@
+adapter: mysql2
+pool: 5
+username: your_user_name
+password: your_password
+host:  localhost
+database: your_database_name
+encoding: utf8mb4
+collation: utf8mb4_unicode_ci

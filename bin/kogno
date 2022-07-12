@@ -1,0 +1,92 @@
+#!/usr/bin/env ruby -W0
+require 'kogno'
+require 'core/loaders/config_files'
+
+require 'core/bin_helpers/webhook_ctl'
+require 'core/bin_helpers/sequences_ctl'
+require 'core/bin_helpers/scheduled_messages_ctl'
+require 'core/bin_helpers/messenger_ctl'
+require 'core/bin_helpers/telegram_ctl'
+require 'core/bin_helpers/server_ctl'
+require 'core/bin_helpers/scaffolding'
+
+require 'core/lib/messenger/api'
+require 'core/lib/telegram/api'
+
+command = (ARGV[0].to_sym rescue nil)
+
+# Kogno::Application.create_project_folders
+
+help_message = %{Usage:
+  kogno 
+      start|stop|restart
+
+      ## Control daemons separatelly
+      http start|stop|restart|status|fg
+      sequences start|stop|restart|fg
+      scheduled_messages start|stop|restart|fg
+      
+      runner \[ruby code\]
+      new \[proyect name\] <- Create a new chatbot
+      install <- Create sql tables needed
+      messenger
+          menu on|off
+          get_started on|off \[page_id\]
+          greeting on|off
+          update_whitelisted_domains
+          ice_breakers on|off
+      telegram
+          webhook start|stop
+          set_commands #{Kogno::Telegram::Api.command_valid_scopes.join("|")}|all
+          delete_commands #{Kogno::Telegram::Api.command_valid_scopes.join("|")}
+}
+
+case command
+  when :http
+    Kogno::WebhookCtl.options(ARGV[1])
+
+  when :start, :stop, :restart, :status
+    Kogno::ServerCtl.options(ARGV[0])  
+    
+  when :console, :c  
+    require 'irb'
+    require 'irb/completion'    
+    require File.join(Kogno::Application.project_path,'application.rb')
+    logger.write "Loading #{Kogno::Application.config.environment} environment (Kogno #{Gem.loaded_specs["kogno"].version.version})", :bright
+    ARGV.clear
+    IRB.start 
+    IRB.conf[:DEBUG_LEVEL]=0
+    IRB.conf[:PROMPT_MODE] = :MY_PROMPT
+
+  when :sequences, :seq
+    Kogno::SequencesCtl.options(ARGV[1])
+
+  when :scheduled_messages, :sm
+    Kogno::ScheduledMessagesCtl.options(ARGV[1])
+
+  when :runner
+    require File.join(Kogno::Application.project_path,'application.rb')
+    eval(ARGV[1])
+
+  when :new
+    Kogno::Scaffolding.new_project
+
+  when :install
+    Kogno::Scaffolding.install
+
+  when :messenger
+    Kogno::MessengerCtl.options(ARGV)
+
+  when :telegram
+    Kogno::TelegramCtl.options(ARGV)
+
+  when :help
+    puts help_message
+
+  when :version
+    puts Gem.loaded_specs["kogno"].version.version
+
+  else
+    puts help_message
+    
+end
