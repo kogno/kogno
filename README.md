@@ -119,9 +119,15 @@ And if you're as passionate about it as we are, come and code with us by fixing 
 
 Kogno is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-> 
-> ## Read the full documentation at http://docs.kogno.io
->         
+
+>
+> ## Learn More
+> Read the full the documentation at http://docs.kogno.io.
+>
+> Also you can download the source code of the [flight reservation demo app](https://github.com/kogno/travel_chatbot) written in Kogno.
+>
+
+
 
 
 
