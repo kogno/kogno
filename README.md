@@ -112,6 +112,7 @@ In the example above, `MainContext` has the ability to handle the following scen
 ## Contribute
 
 You can contribute a lot to this project by developing conversational applications with Kogno and in case you find a bug, [please report it](https://github.com/kogno/kogno/issues).
+
 And if you're as passionate about it as we are, come and code with us by fixing bugs, adding more integrations and creating more features.
 
 ## License
