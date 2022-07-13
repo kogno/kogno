@@ -107,7 +107,7 @@ In the example above, `MainContext` has the ability to handle the following scen
 - [`intent "greeting"`](https://docs.kogno.io/contexts/actions/intent): A greeting message such as "Hello" or "Hi". Which was previously [created and trained on the NLP engine](https://docs.kogno.io/installation/nlp-configuration).
 - [`postback"featured_products"`](https://docs.kogno.io/contexts/actions/postback):  Click event on the button "View Products" that have been sent as reply in the previous block intent "greeting".
 - [`keyword ["stop", "quit"]`](https://docs.kogno.io/contexts/actions/keyword): Specifically two keywords "stop" or "quit".
-- [`everything_else`](https://docs.kogno.io/contexts/actions/everything_else): Any message whose characteristics didn't match the execution criteria of the scenarios listed above.
+- [`everything_else`](https://docs.kogno.io/contexts/actions/everything_else): Any message whose characteristics didn't match the execution criteria of the blocks listed above.
 
 ## Contribute
 
