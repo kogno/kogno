@@ -119,9 +119,9 @@ And if you're as passionate about it as we are, come and code with us by fixing 
 
 Kogno is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-## Read the full documentation at http://docs.kogno.io
-        
-        
+> 
+> ## Read the full documentation at http://docs.kogno.io
+>         
 
 
 
