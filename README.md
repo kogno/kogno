@@ -110,6 +110,10 @@ In the example above, `MainContext` has the ability to handle the following scen
 - [`keyword ["stop", "quit"]`](https://docs.kogno.io/contexts/actions/keyword): Specifically two keywords "stop" or "quit".
 - [`everything_else`](https://docs.kogno.io/contexts/actions/everything_else): Any message whose characteristics didn't match the execution criteria of the blocks listed above.
 
+>
+> To better understand how blocks work and to see the full list of them, check the following link https://docs.kogno.io/contexts/actions.
+>
+
 ## Contribute
 
 You can contribute a lot to this project by developing conversational applications with Kogno and in case you find a bug, [please report it](https://github.com/kogno/kogno/issues).
