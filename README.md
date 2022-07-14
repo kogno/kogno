@@ -3,10 +3,12 @@ Kogno is an open source framework running on the Ruby programming language for d
 
 It is based on the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) architecture and strongly inspired by Rails, so if you have ever worked on this framework, Kogno will be very familiar to you.
 
-> #### Supported Platforms
-> Messenger, WhatsApp and Telegram, maintaining a unified code in a single application for all of them.
+The following messaging platforms are currently supported: WhatsApp, Messenger and Telegram, maintaining a unified code in a single application for all of them.
 
-You can read the full documentation at https://docs.kogno.io or just continue here.
+> #### Full Documentation
+> You can read the full documentation at https://docs.kogno.io or just continue here.
+
+
 
 ## Getting Started
 
