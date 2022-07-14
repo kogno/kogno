@@ -12,16 +12,16 @@ You can read the full documentation here https://docs.kogno.io or continue here.
 
 #### 1. Install Kogno gem:
 
-        $ gem install kogno
+    $ gem install kogno
         
 #### 2. At the command prompt, create a new Kogno application:
 
-        $ kogno new my_chatbot
+    $ kogno new my_chatbot
         
 #### 3. Change directory to `my_chatbot` and install the dependencies:
 > The MySQL development libraries must be previously installed before running the following command.   
 
-        $ bundle install
+    $ bundle install
         
 #### 4. Configure the database at `config/database.yml`:
 
@@ -38,11 +38,12 @@ collation: utf8mb4_unicode_ci
 
 #### 5. Create framework's tables in database:
 
-        $ kogno install
+    $ kogno install
         
 #### 6. Start your web server to receive incoming updates via an outgoing webhook from the messaging platforms:
 
-        $ kogno http start
+    $ kogno http start
+    
 > ##### In order to receive webhooks you must configure the messaging platforms:
 > - [Configure WhatsApp](https://docs.kogno.io/installation/whatsapp-configuration)
 > - [Configure Telegram](https://docs.kogno.io/installation/telegram-configuration)
