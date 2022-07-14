@@ -6,7 +6,7 @@ It is based on the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%
 > #### Supported Platforms
 > Messenger, WhatsApp and Telegram, maintaining a unified code in a single application for all of them.
 
-You can read the full documentation here https://docs.kogno.io or continue here.
+You can read the full documentation at https://docs.kogno.io or just continue here.
 
 ## Getting Started
 
