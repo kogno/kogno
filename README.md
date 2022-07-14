@@ -105,13 +105,13 @@ end
 
 In the example above, `MainContext` has the ability to handle the following scenarios:
 
-- [`intent "greeting"`](https://docs.kogno.io/contexts/actions/intent): A greeting message such as "Hello" or "Hi". Which was previously [created and trained on the NLP engine](https://docs.kogno.io/installation/nlp-configuration).
-- [`postback"featured_products"`](https://docs.kogno.io/contexts/actions/postback):  Click event on the button "View Products" that have been sent as reply in the previous block intent "greeting".
-- [`keyword ["stop", "quit"]`](https://docs.kogno.io/contexts/actions/keyword): Specifically two keywords "stop" or "quit".
-- [`everything_else`](https://docs.kogno.io/contexts/actions/everything_else): Any message whose characteristics didn't match the execution criteria of the blocks listed above.
+- [`intent "greeting"`](https://docs.kogno.io/contexts/blocks/intent): A greeting message such as "Hello" or "Hi". Which was previously [created and trained on the NLP engine](https://docs.kogno.io/installation/nlp-configuration).
+- [`postback"featured_products"`](https://docs.kogno.io/contexts/blocks/postback):  Click event on the button "View Products" that have been sent as reply in the previous block intent "greeting".
+- [`keyword ["stop", "quit"]`](https://docs.kogno.io/contexts/blocks/keyword): Specifically two keywords "stop" or "quit".
+- [`everything_else`](https://docs.kogno.io/contexts/blocks/everything_else): Any message whose characteristics didn't match the execution criteria of the blocks listed above.
 
 >
-> To better understand how blocks work and to see the full list of them, check the following link https://docs.kogno.io/contexts/actions.
+> To better understand how blocks work and to see the full list of them, check the following link https://docs.kogno.io/contexts/blocks.
 >
 
 ## Contribute
