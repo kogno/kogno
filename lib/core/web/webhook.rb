@@ -46,7 +46,7 @@ post Kogno::Application.config.messenger.webhook_route do
   request.body.rewind
   params = JSON.parse(request.body.read, {:symbolize_names => true})
   $logger.write "MESSENGER INCOMING WEBHOOK: #{request.fullpath}", :bright
-  $logger.debug "PARAMS: #{params}"
+  $logger.write "PARAMS: #{params}"
   if params[:object] == "page"
     params[:entry].each do |entry|
       events = []
@@ -112,7 +112,7 @@ post Kogno::Application.config.telegram.webhook_route do
   request.body.rewind
   params = JSON.parse(request.body.read, {:symbolize_names => true})
   $logger.write "TELEGRAM INCOMING WEBHOOK: #{request.fullpath}", :bright
-  $logger.debug "PARAMS: #{params}"
+  $logger.write "PARAMS: #{params}"
 
   message = {data: params[:message], type: :message} if !params[:message].nil?
   message = {data: params[:callback_query], type: :callback_query} if !params[:callback_query].nil? and message.nil?
@@ -151,7 +151,7 @@ post Kogno::Application.config.whatsapp.webhook_route do
   request.body.rewind
   params = JSON.parse(request.body.read, {:symbolize_names => true})
   $logger.write "WHATSAPP INCOMING WEBHOOK: #{request.fullpath}", :bright
-  $logger.debug "PARAMS: #{params}"
+  $logger.write "PARAMS: #{params}"
   entries = params[:entry]  
   entries.each do |entry|
     entry[:changes].each do |change|    

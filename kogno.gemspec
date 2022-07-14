@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = 'kogno'
-  s.version     = '1.0.1.1'
+  s.version     = '1.0.1.3'
   s.executables << 'kogno'
   s.date        = '2020-06-27'
    s.summary     = "Kogno Framework"
-  s.description = "Kogno is a conversational application framework running on the Ruby programming language."
+  s.description = "Kogno is an open source framework running on the Ruby programming language for developing conversational applications."
   s.required_ruby_version = '>= 2.7.0'
   s.required_rubygems_version = '>= 1.8.11'
   

@@ -122,7 +122,7 @@ class Notification
   end
 
   def typing(seconds)
-    typing_on(seconds)
+    typing_on(seconds.to_i)
   end
 
   def typing_off

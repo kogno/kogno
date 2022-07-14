@@ -56,13 +56,12 @@ module Kogno
         File.expand_path(Dir.pwd)
       end
 
-      # def create_project_folders
-      #   tmp = File.join(project_path,"tmp")
-      #   logs = File.join(project_path,"logs")
-      #   web_public = File.join(project_path,"web","logs")
-      #   Dir.mkdir(tmp,0755) unless File.exist?(tmp)
-      #   Dir.mkdir(logs,0755) unless File.exist?(logs)
-      # end
+      def create_project_folders
+        tmp = File.join(project_path,"tmp")
+        logs = File.join(project_path,"logs")
+        Dir.mkdir(tmp,0755) unless File.exist?(tmp)
+        Dir.mkdir(logs,0755) unless File.exist?(logs)
+      end
 
       def load_core
         ignore_files = Dir[File.join(core_path,'lib','core','web','inc','*.rb')]

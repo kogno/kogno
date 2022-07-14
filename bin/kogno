@@ -15,7 +15,7 @@ require 'core/lib/telegram/api'
 
 command = (ARGV[0].to_sym rescue nil)
 
-# Kogno::Application.create_project_folders
+Kogno::Application.create_project_folders
 
 help_message = %{Usage:
   kogno 
