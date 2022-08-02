@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'kogno'
-  s.version     = '1.0.1.4'
+  s.version     = '1.0.1.3'
   s.executables << 'kogno'
   s.date        = '2020-06-27'
    s.summary     = "Kogno Framework"
